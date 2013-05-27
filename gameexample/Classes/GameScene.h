@@ -18,6 +18,8 @@ public:
     void update(float deltaTime);
     
     bool checkForGameOver();
+    
+    void goToGameOverScene();
 
     // preprocessor macro for "static create()" constructor ( node() deprecated )
     CREATE_FUNC(GameScene);

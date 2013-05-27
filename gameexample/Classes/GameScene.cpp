@@ -45,9 +45,8 @@ void GameScene::update(float deltaTime) {
     CCNode *heroi = this->getChildByTag(666);
     heroi->setPosition(ccpAdd(heroi->getPosition(), ccp(1, 0)));
     
-    
     if (checkForGameOver()) {
-        CCDirector::sharedDirector()->replaceScene(GameScene::scene());
+        goToGameOverScene();
     }
     
 }
@@ -58,6 +57,11 @@ bool GameScene::checkForGameOver() {
         return true;
     }
     return false;
+}
+
+void GameScene::goToGameOverScene() {
+    //temporariamente somente reseta e inicia o jogo automaticamente.
+    CCDirector::sharedDirector()->replaceScene(GameScene::scene());
 }
 
 void GameScene::menuCloseCallback(CCObject* pSender)
