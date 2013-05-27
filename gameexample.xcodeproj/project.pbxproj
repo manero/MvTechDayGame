@@ -219,7 +219,7 @@
 		ABC08D1D17540DB400F6980B /* cocos2dx-ext.mkf in Resources */ = {isa = PBXBuildFile; fileRef = ABC08D1C17540DB400F6980B /* cocos2dx-ext.mkf */; };
 		ABC08D1F17540DB400F6980B /* cocos2dx-ext_public.defines.txt in Resources */ = {isa = PBXBuildFile; fileRef = ABC08D1E17540DB400F6980B /* cocos2dx-ext_public.defines.txt */; };
 		ABC08D2517540DB400F6980B /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABC08D2417540DB400F6980B /* AppDelegate.cpp */; };
-		ABC08D2817540DB400F6980B /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABC08D2717540DB400F6980B /* HelloWorldScene.cpp */; };
+		ABC08D2817540DB400F6980B /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABC08D2717540DB400F6980B /* GameScene.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -688,8 +688,8 @@
 		ABC08D2117540DB400F6980B /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		ABC08D2317540DB400F6980B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		ABC08D2417540DB400F6980B /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
-		ABC08D2617540DB400F6980B /* HelloWorldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/HelloWorldScene.h; sourceTree = "<group>"; };
-		ABC08D2717540DB400F6980B /* HelloWorldScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldScene.cpp; path = Classes/HelloWorldScene.cpp; sourceTree = "<group>"; };
+		ABC08D2617540DB400F6980B /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = Classes/GameScene.h; sourceTree = "<group>"; };
+		ABC08D2717540DB400F6980B /* GameScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = Classes/GameScene.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1692,8 +1692,8 @@
 			children = (
 				ABC08D2317540DB400F6980B /* AppDelegate.h */,
 				ABC08D2417540DB400F6980B /* AppDelegate.cpp */,
-				ABC08D2617540DB400F6980B /* HelloWorldScene.h */,
-				ABC08D2717540DB400F6980B /* HelloWorldScene.cpp */,
+				ABC08D2617540DB400F6980B /* GameScene.h */,
+				ABC08D2717540DB400F6980B /* GameScene.cpp */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1960,7 +1960,7 @@
 				ABC08D1617540DB400F6980B /* CCPhysicsDebugNode.cpp in Sources */,
 				ABC08D1917540DB400F6980B /* CCPhysicsSprite.cpp in Sources */,
 				ABC08D2517540DB400F6980B /* AppDelegate.cpp in Sources */,
-				ABC08D2817540DB400F6980B /* HelloWorldScene.cpp in Sources */,
+				ABC08D2817540DB400F6980B /* GameScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

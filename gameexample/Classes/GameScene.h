@@ -1,9 +1,9 @@
-#ifndef __HELLOWORLD_SCENE_H__
-#define __HELLOWORLD_SCENE_H__
+#ifndef __GameScene_SCENE_H__
+#define __GameScene_SCENE_H__
 
 #include "cocos2d.h"
 
-class HelloWorld : public cocos2d::CCLayer
+class GameScene : public cocos2d::CCLayer
 {
 public:
     // Method 'init' in cocos2d-x returns bool, instead of 'id' in cocos2d-iphone (an object pointer)
@@ -14,9 +14,11 @@ public:
     
     // a selector callback
     void menuCloseCallback(CCObject* pSender);
+    
+    void update(float deltaTime);
 
     // preprocessor macro for "static create()" constructor ( node() deprecated )
-    CREATE_FUNC(HelloWorld);
+    CREATE_FUNC(GameScene);
 };
 
-#endif // __HELLOWORLD_SCENE_H__
+#endif // __GameScene_SCENE_H__
