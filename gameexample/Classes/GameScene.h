@@ -2,8 +2,9 @@
 #define __GameScene_SCENE_H__
 
 #include "cocos2d.h"
+USING_NS_CC;
 
-class GameScene : public cocos2d::CCLayer
+class GameScene : public CCLayer
 {
 public:
     // Method 'init' in cocos2d-x returns bool, instead of 'id' in cocos2d-iphone (an object pointer)
@@ -21,6 +22,14 @@ public:
     
     void goToGameOverScene();
 
+    
+    //touches
+    virtual bool ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent);
+//    virtual void ccTouchMoved(CCTouch *pTouch, CCEvent *pEvent);
+//    virtual void ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent);
+//    virtual void ccTouchCancelled(CCTouch *pTouch, CCEvent *pEvent);
+
+    
     // preprocessor macro for "static create()" constructor ( node() deprecated )
     CREATE_FUNC(GameScene);
 };

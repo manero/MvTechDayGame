@@ -38,6 +38,9 @@ bool GameScene::init()
     
     this->schedule(schedule_selector(GameScene::update));
 
+    setTouchMode(kCCTouchesOneByOne);
+    registerWithTouchDispatcher();
+    
     return true;
 }
 
@@ -71,4 +74,10 @@ void GameScene::menuCloseCallback(CCObject* pSender)
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     exit(0);
 #endif
+}
+
+
+bool GameScene::ccTouchBegan(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent) {
+    CCLOG("touches began! position: x:%f y:%f", pTouch->getLocation().x, pTouch->getLocation().y);
+    return true;
 }
