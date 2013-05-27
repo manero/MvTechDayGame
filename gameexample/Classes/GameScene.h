@@ -24,6 +24,7 @@ public:
     void goToGameOverScene();
     void goToVictoryScene();
     
+    void decayYOffsetValue();
 
     
     //touches

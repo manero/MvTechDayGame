@@ -29,7 +29,6 @@ bool GameScene::init()
         return false;
     }
     CCSize screenSize = CCDirector::sharedDirector()->getWinSize();
-//    screenSize.width
     
     CCSprite *heroi = CCSprite::create("CloseNormal.png");
     heroi->setPosition(ccp(heroi->boundingBox().getMaxX(), screenSize.height / 2.0f));
@@ -50,12 +49,21 @@ void GameScene::update(float deltaTime) {
     CCNode *heroi = this->getChildByTag(666);
     heroi->setPosition(ccpAdd(heroi->getPosition(), ccp(1, yOffsetValue)));
 
+    decayYOffsetValue();
+    
     if (checkForGameOver()) {
         goToGameOverScene();
     }
     
     if (checkForVictory()) {
         goToVictoryScene();
+    }
+}
+
+void GameScene::decayYOffsetValue() {
+    yOffsetValue *= 0.98f;
+    if (fabs(yOffsetValue) < 0.001f) {
+        yOffsetValue = 0;
     }
 }
 
