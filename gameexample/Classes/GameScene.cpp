@@ -53,14 +53,16 @@ void GameScene::update(float deltaTime) {
     if (checkForGameOver()) {
         goToGameOverScene();
     }
+    
+    if (checkForVictory()) {
+        goToVictoryScene();
+    }
 }
 
 bool GameScene::checkForGameOver() {
     CCNode *heroi = this->getChildByTag(666);
     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
     if (
-        heroi->getPosition().x > winSize.width // reached the far side of the screen (actually this is a success scenario!)
-        ||
         heroi->getPosition().y > winSize.height //went too far up
         ||
         heroi->getPosition().y < 0 //went too far down
@@ -71,11 +73,25 @@ bool GameScene::checkForGameOver() {
     return false;
 }
 
+bool GameScene::checkForVictory() {
+    CCNode *heroi = this->getChildByTag(666);
+    CCSize winSize = CCDirector::sharedDirector()->getWinSize();
+    if (heroi->getPosition().x > winSize.width) { // reached the far side of the screen
+        CCLog("wiiiiiiiiinnnnnn!!!");
+        return true;
+    }
+    return false;
+}
+
 void GameScene::goToGameOverScene() {
     //temporariamente somente reseta e inicia o jogo automaticamente.
     CCDirector::sharedDirector()->replaceScene(GameScene::scene());
 }
 
+void GameScene::goToVictoryScene() {
+    //ainda faz a mesma coisa que o gameoverscene mas vai melhorar! :)
+    CCDirector::sharedDirector()->replaceScene(GameScene::scene());
+}
 void GameScene::menuCloseCallback(CCObject* pSender)
 {
     CCDirector::sharedDirector()->end();

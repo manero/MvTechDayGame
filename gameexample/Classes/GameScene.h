@@ -19,8 +19,11 @@ public:
     void update(float deltaTime);
     
     bool checkForGameOver();
+    bool checkForVictory();
     
     void goToGameOverScene();
+    void goToVictoryScene();
+    
 
     
     //touches
