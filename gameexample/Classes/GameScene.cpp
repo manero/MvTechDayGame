@@ -41,17 +41,18 @@ bool GameScene::init()
     setTouchMode(kCCTouchesOneByOne);
     registerWithTouchDispatcher();
     
+    
+    yOffsetValue = 0;
     return true;
 }
 
 void GameScene::update(float deltaTime) {
     CCNode *heroi = this->getChildByTag(666);
-    heroi->setPosition(ccpAdd(heroi->getPosition(), ccp(1, 0)));
-    
+    heroi->setPosition(ccpAdd(heroi->getPosition(), ccp(1, yOffsetValue)));
+
     if (checkForGameOver()) {
         goToGameOverScene();
     }
-    
 }
 
 bool GameScene::checkForGameOver() {
@@ -79,5 +80,10 @@ void GameScene::menuCloseCallback(CCObject* pSender)
 
 bool GameScene::ccTouchBegan(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent) {
     CCLOG("touches began! position: x:%f y:%f", pTouch->getLocation().x, pTouch->getLocation().y);
+    if (pTouch->getLocation().y > CCDirector::sharedDirector()->getWinSize().height / 2.0f ) {
+        ++yOffsetValue;
+    } else {
+        --yOffsetValue;
+    }
     return true;
 }

@@ -32,6 +32,9 @@ public:
     
     // preprocessor macro for "static create()" constructor ( node() deprecated )
     CREATE_FUNC(GameScene);
+    
+private:
+    float yOffsetValue;
 };
 
 #endif // __GameScene_SCENE_H__
