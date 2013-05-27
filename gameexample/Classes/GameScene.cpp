@@ -2,7 +2,6 @@
 #include "SimpleAudioEngine.h"
 
 using namespace cocos2d;
-using namespace CocosDenshion;
 
 CCScene* GameScene::scene()
 {
@@ -36,6 +35,7 @@ bool GameScene::init()
     this->addChild(heroi);
     
     this->schedule(schedule_selector(GameScene::update));
+    this->schedule(schedule_selector(GameScene::spawnEnemy), 1.0f);
 
     setTouchMode(kCCTouchesOneByOne);
     registerWithTouchDispatcher();
@@ -58,6 +58,14 @@ void GameScene::update(float deltaTime) {
     if (checkForVictory()) {
         goToVictoryScene();
     }
+}
+
+void GameScene::spawnEnemy() {
+    CCNode *heroi = this->getChildByTag(666);
+    CCSprite *enemy = CCSprite::create("CloseSelected.png");
+    enemy->setPosition(ccp(heroi->getPosition().x + (3 * heroi->boundingBox().size.width), heroi->getPosition().y));
+    CCLog("criando inimigo na posição... x: %f y:%f", enemy->getPosition().x, enemy->getPosition().y);
+    this->addChild(enemy);
 }
 
 void GameScene::decayYOffsetValue() {

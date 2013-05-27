@@ -17,6 +17,7 @@ public:
     void menuCloseCallback(CCObject* pSender);
     
     void update(float deltaTime);
+    void spawnEnemy();
     
     bool checkForGameOver();
     bool checkForVictory();
