@@ -45,9 +45,19 @@ void GameScene::update(float deltaTime) {
     CCNode *heroi = this->getChildByTag(666);
     heroi->setPosition(ccpAdd(heroi->getPosition(), ccp(1, 0)));
     
-    if (heroi->getPosition().x > CCDirector::sharedDirector()->getWinSize().width) {
+    
+    if (checkForGameOver()) {
         CCDirector::sharedDirector()->replaceScene(GameScene::scene());
     }
+    
+}
+
+bool GameScene::checkForGameOver() {
+    CCNode *heroi = this->getChildByTag(666);
+    if (heroi->getPosition().x > CCDirector::sharedDirector()->getWinSize().width) {
+        return true;
+    }
+    return false;
 }
 
 void GameScene::menuCloseCallback(CCObject* pSender)
