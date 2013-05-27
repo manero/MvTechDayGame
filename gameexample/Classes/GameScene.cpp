@@ -57,7 +57,15 @@ void GameScene::update(float deltaTime) {
 
 bool GameScene::checkForGameOver() {
     CCNode *heroi = this->getChildByTag(666);
-    if (heroi->getPosition().x > CCDirector::sharedDirector()->getWinSize().width) {
+    CCSize winSize = CCDirector::sharedDirector()->getWinSize();
+    if (
+        heroi->getPosition().x > winSize.width // reached the far side of the screen (actually this is a success scenario!)
+        ||
+        heroi->getPosition().y > winSize.height //went too far up
+        ||
+        heroi->getPosition().y < 0 //went too far down
+        ) {
+        CCLog("GAMEOVER!!!!11111onze!11!");
         return true;
     }
     return false;
