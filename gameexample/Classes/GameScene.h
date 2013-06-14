@@ -40,6 +40,7 @@ public:
     
 private:
     float yOffsetValue;
+    int numberOfEnemies;
 };
 
 #endif // __GameScene_SCENE_H__

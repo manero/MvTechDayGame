@@ -1,6 +1,8 @@
 #include "GameScene.h"
 #include "SimpleAudioEngine.h"
 
+#define ENEMY_TAG 1000
+
 using namespace cocos2d;
 
 CCScene* GameScene::scene()
@@ -42,6 +44,7 @@ bool GameScene::init()
     
     
     yOffsetValue = 0;
+    numberOfEnemies = 0;
     return true;
 }
 
@@ -64,8 +67,10 @@ void GameScene::spawnEnemy() {
     CCNode *heroi = this->getChildByTag(666);
     CCSprite *enemy = CCSprite::create("CloseSelected.png");
     enemy->setPosition(ccp(heroi->getPosition().x + (3 * heroi->boundingBox().size.width), heroi->getPosition().y));
+    enemy->setTag(ENEMY_TAG + numberOfEnemies);
     CCLog("criando inimigo na posição... x: %f y:%f", enemy->getPosition().x, enemy->getPosition().y);
     this->addChild(enemy);
+    ++numberOfEnemies;
 }
 
 void GameScene::decayYOffsetValue() {
@@ -85,6 +90,13 @@ bool GameScene::checkForGameOver() {
         ) {
         CCLog("GAMEOVER!!!!11111onze!11!");
         return true;
+    }
+    for (int i = ENEMY_TAG; i < ENEMY_TAG + numberOfEnemies; i++) {
+        CCNode *enemy = this->getChildByTag(i);
+        if (heroi->boundingBox().intersectsRect(enemy->boundingBox())) {
+            CCLog("GAMEOVER!!!!11111onze!11!");
+            return true;
+        }
     }
     return false;
 }
