@@ -30,8 +30,10 @@ bool GameScene::init()
         return false;
     }
     CCSize screenSize = CCDirector::sharedDirector()->getWinSize();
+    CCLayerColor *bg = CCLayerColor::create(ccc4(255, 255, 255, 255));
+    this->addChild(bg, -100);
     
-    CCSprite *heroi = CCSprite::create("CloseNormal.png");
+    CCSprite *heroi = CCSprite::create("player.png");
     heroi->setPosition(ccp(heroi->boundingBox().getMaxX(), screenSize.height / 2.0f));
     heroi->setTag(666);
     this->addChild(heroi);
@@ -65,7 +67,7 @@ void GameScene::update(float deltaTime) {
 
 void GameScene::spawnEnemy() {
     CCNode *heroi = this->getChildByTag(666);
-    CCSprite *enemy = CCSprite::create("CloseSelected.png");
+    CCSprite *enemy = CCSprite::create("monster.png");
     enemy->setPosition(ccp(heroi->getPosition().x + (3 * heroi->boundingBox().size.width), heroi->getPosition().y));
     enemy->setTag(ENEMY_TAG + numberOfEnemies);
     CCLog("criando inimigo na posição... x: %f y:%f", enemy->getPosition().x, enemy->getPosition().y);
