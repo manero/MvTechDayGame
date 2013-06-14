@@ -29,6 +29,9 @@ bool GameScene::init()
     {
         return false;
     }
+    
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("background-music-aac.caf", true);
+    
     CCSize screenSize = CCDirector::sharedDirector()->getWinSize();
     CCLayerColor *bg = CCLayerColor::create(ccc4(255, 255, 255, 255));
     this->addChild(bg, -100);
@@ -72,6 +75,8 @@ void GameScene::spawnEnemy() {
     enemy->setTag(ENEMY_TAG + numberOfEnemies);
     CCLog("criando inimigo na posição... x: %f y:%f", enemy->getPosition().x, enemy->getPosition().y);
     this->addChild(enemy);
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("pew-pew-lei.caf");
+
     ++numberOfEnemies;
 }
 

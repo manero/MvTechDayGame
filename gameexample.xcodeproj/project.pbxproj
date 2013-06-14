@@ -222,6 +222,8 @@
 		ABC08D2817540DB400F6980B /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABC08D2717540DB400F6980B /* GameScene.cpp */; };
 		F186366F176BB4440037F3CC /* monster.png in Resources */ = {isa = PBXBuildFile; fileRef = F186366D176BB4440037F3CC /* monster.png */; };
 		F1863670176BB4440037F3CC /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = F186366E176BB4440037F3CC /* player.png */; };
+		F1863673176BBE460037F3CC /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = F1863671176BBE460037F3CC /* background-music-aac.caf */; };
+		F1863674176BBE460037F3CC /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = F1863672176BBE460037F3CC /* pew-pew-lei.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -694,6 +696,8 @@
 		ABC08D2717540DB400F6980B /* GameScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = Classes/GameScene.cpp; sourceTree = "<group>"; };
 		F186366D176BB4440037F3CC /* monster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = monster.png; path = Resources/monster.png; sourceTree = "<group>"; };
 		F186366E176BB4440037F3CC /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = player.png; path = Resources/player.png; sourceTree = "<group>"; };
+		F1863671176BBE460037F3CC /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "background-music-aac.caf"; path = "Resources/background-music-aac.caf"; sourceTree = "<group>"; };
+		F1863672176BBE460037F3CC /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "pew-pew-lei.caf"; path = "Resources/pew-pew-lei.caf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -764,6 +768,8 @@
 		ABC08A5517540DAE00F6980B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F1863671176BBE460037F3CC /* background-music-aac.caf */,
+				F1863672176BBE460037F3CC /* pew-pew-lei.caf */,
 				F186366D176BB4440037F3CC /* monster.png */,
 				F186366E176BB4440037F3CC /* player.png */,
 				ABC08A5617540DAE00F6980B /* CloseNormal.png */,
@@ -1771,6 +1777,8 @@
 				ABC08D1F17540DB400F6980B /* cocos2dx-ext_public.defines.txt in Resources */,
 				F186366F176BB4440037F3CC /* monster.png in Resources */,
 				F1863670176BB4440037F3CC /* player.png in Resources */,
+				F1863673176BBE460037F3CC /* background-music-aac.caf in Resources */,
+				F1863674176BBE460037F3CC /* pew-pew-lei.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
