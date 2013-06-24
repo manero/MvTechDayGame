@@ -220,6 +220,10 @@
 		ABC08D1F17540DB400F6980B /* cocos2dx-ext_public.defines.txt in Resources */ = {isa = PBXBuildFile; fileRef = ABC08D1E17540DB400F6980B /* cocos2dx-ext_public.defines.txt */; };
 		ABC08D2517540DB400F6980B /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABC08D2417540DB400F6980B /* AppDelegate.cpp */; };
 		ABC08D2817540DB400F6980B /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABC08D2717540DB400F6980B /* GameScene.cpp */; };
+		F186366F176BB4440037F3CC /* monster.png in Resources */ = {isa = PBXBuildFile; fileRef = F186366D176BB4440037F3CC /* monster.png */; };
+		F1863670176BB4440037F3CC /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = F186366E176BB4440037F3CC /* player.png */; };
+		F1863673176BBE460037F3CC /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = F1863671176BBE460037F3CC /* background-music-aac.caf */; };
+		F1863674176BBE460037F3CC /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = F1863672176BBE460037F3CC /* pew-pew-lei.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -690,6 +694,10 @@
 		ABC08D2417540DB400F6980B /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
 		ABC08D2617540DB400F6980B /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = Classes/GameScene.h; sourceTree = "<group>"; };
 		ABC08D2717540DB400F6980B /* GameScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = Classes/GameScene.cpp; sourceTree = "<group>"; };
+		F186366D176BB4440037F3CC /* monster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = monster.png; path = Resources/monster.png; sourceTree = "<group>"; };
+		F186366E176BB4440037F3CC /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = player.png; path = Resources/player.png; sourceTree = "<group>"; };
+		F1863671176BBE460037F3CC /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "background-music-aac.caf"; path = "Resources/background-music-aac.caf"; sourceTree = "<group>"; };
+		F1863672176BBE460037F3CC /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "pew-pew-lei.caf"; path = "Resources/pew-pew-lei.caf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -760,6 +768,10 @@
 		ABC08A5517540DAE00F6980B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F1863671176BBE460037F3CC /* background-music-aac.caf */,
+				F1863672176BBE460037F3CC /* pew-pew-lei.caf */,
+				F186366D176BB4440037F3CC /* monster.png */,
+				F186366E176BB4440037F3CC /* player.png */,
 				ABC08A5617540DAE00F6980B /* CloseNormal.png */,
 				ABC08A5817540DAE00F6980B /* CloseSelected.png */,
 				ABC08A5A17540DAE00F6980B /* Default.png */,
@@ -1763,6 +1775,10 @@
 				ABC08C7117540DB300F6980B /* project.pbxproj in Resources */,
 				ABC08D1D17540DB400F6980B /* cocos2dx-ext.mkf in Resources */,
 				ABC08D1F17540DB400F6980B /* cocos2dx-ext_public.defines.txt in Resources */,
+				F186366F176BB4440037F3CC /* monster.png in Resources */,
+				F1863670176BB4440037F3CC /* player.png in Resources */,
+				F1863673176BBE460037F3CC /* background-music-aac.caf in Resources */,
+				F1863674176BBE460037F3CC /* pew-pew-lei.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2094,6 +2110,7 @@
 				ABC08D2D17540DB400F6980B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
